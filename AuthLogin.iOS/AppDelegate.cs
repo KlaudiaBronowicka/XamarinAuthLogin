@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
 using UIKit;
 
 namespace AuthLogin.iOS
@@ -24,6 +20,7 @@ namespace AuthLogin.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AuthLogin.Views.ProfilePage"
+    xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:ffImageLoading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    NavigationPage.HasNavigationBar="False">
+    <yummy:PancakeView
+        BackgroundGradientEndColor="DarkSlateGray"
+        BackgroundGradientStartColor="DarkCyan"
+        BackgroundGradientAngle="30"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        Spacing="60"
+        VerticalOptions="Center"
+        Padding="40, 0, 40, 0">
+        <yummy:PancakeView
+            WidthRequest="290"
+            HeightRequest="300"
+            HorizontalOptions="Center"
+            CornerRadius="30"
+            BorderColor="DarkCyan"
+            BorderThickness="4"
+            BorderGradientStartColor="DarkCyan"
+            BorderGradientEndColor="LightCyan"
+            BorderGradientAngle="30">
+            <ffImageLoading:CachedImage
+                Source="{Binding ImageURL}"
+                Aspect="AspectFill"/>
+        </yummy:PancakeView>
+        <Label
+            Text="{Binding Name}"
+            HorizontalOptions="CenterAndExpand"
+            TextColor="LightCyan"
+            FontSize="32"/>
+    </StackLayout>
+</yummy:PancakeView>
+</ContentPage>
